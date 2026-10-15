@@ -1,0 +1,55 @@
+CREATE DATABASE insurance_fraud_detection;
+USE insurance_fraud_detection;
+
+CREATE TABLE ClientRegister_Model (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100),
+    email VARCHAR(150),
+    password VARCHAR(100),
+    phoneno VARCHAR(20),
+    country VARCHAR(100),
+    state VARCHAR(100),
+    city VARCHAR(100),
+    address TEXT,
+    gender VARCHAR(20)
+);
+
+CREATE TABLE insurance_claim_status (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Account_Code VARCHAR(100),
+    DATE_OF_INTIMATION DATE,
+    DATE_OF_ACCIDENT DATE,
+    CLAIM_Real VARCHAR(50),
+    AGE INT,
+    TYPE VARCHAR(100),
+    DRIVING_LICENSE_ISSUE VARCHAR(100),
+    BODY_TYPE VARCHAR(100),
+    MAKE VARCHAR(100),
+    MODEL VARCHAR(100),
+    YEAR INT,
+    CHASIS_Real VARCHAR(100),
+    REG VARCHAR(100),
+    SUM_INSURED FLOAT,
+    POLICY_NO VARCHAR(100),
+    POLICY_START DATE,
+    POLICY_END DATE,
+    INTIMATED_AMOUNT FLOAT,
+    INTIMATED_SF FLOAT,
+    EXECUTIVE VARCHAR(100),
+    PRODUCT VARCHAR(100),
+    POLICYTYPE VARCHAR(100),
+    NATIONALITY VARCHAR(100),
+    PREDICTION VARCHAR(50)
+);
+
+CREATE TABLE detection_accuracy (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    names VARCHAR(100),
+    ratio FLOAT
+);
+
+CREATE TABLE detection_ratio (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    names VARCHAR(100),
+    ratio FLOAT
+);
